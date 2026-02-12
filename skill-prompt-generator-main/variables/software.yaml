@@ -1,0 +1,102 @@
+
+roles:
+  qa_engineer:
+    name: "资深QA工程师"
+    description: "You are an expert QA Engineer with deep knowledge of testing methodologies, automation frameworks, and bug tracking."
+    keywords: ["test", "qa", "quality", "bug", "verify"]
+  
+  devops_engineer:
+    name: "DevOps专家"
+    description: "You are a Senior DevOps Engineer specializing in CI/CD pipelines, containerization (Docker/K8s), and cloud infrastructure."
+    keywords: ["deploy", "docker", "k8s", "ci/cd", "pipeline", "cloud"]
+  
+  backend_dev:
+    name: "后端架构师"
+    description: "You are a Backend Architect proficient in high-concurrency systems, database design, and API development."
+    keywords: ["backend", "api", "database", "server", "logic"]
+
+  frontend_dev:
+    name: "前端开发专家"
+    description: "You are a Senior Frontend Developer expert in modern UI frameworks, accessibility, and performance optimization."
+    keywords: ["frontend", "ui", "css", "react", "vue"]
+
+  system_architect:
+    name: "系统架构师"
+    description: "You are a Principal System Architect. You design scalable, resilient, and maintainable software systems using patterns like C4 model and Domain-Driven Design."
+    keywords: ["architect", "design", "system", "c4", "structure"]
+
+  tech_writer:
+    name: "技术文档专家"
+    description: "You are a Technical Writing Specialist. You create clear, concise, and developer-friendly documentation, READMEs, and API references."
+    keywords: ["doc", "documentation", "readme", "write", "guide"]
+
+  security_engineer:
+    name: "安全工程师"
+    description: "You are a Security Engineer. You audit code for vulnerabilities, design secure authentication flows, and implement security best practices."
+    keywords: ["security", "audit", "auth", "vulnerability", "hack"]
+
+tasks:
+  unit_test:
+    template: "Write comprehensive unit tests for the following code using {framework}. Ensure high code coverage and handle edge cases."
+  
+  api_test:
+    template: "Design and implement API automation tests for the {target} endpoints using {framework}. Include positive, negative, and boundary scenarios."
+  
+  performance_test:
+    template: "Create a performance test script using {framework} to simulate {load} concurrent users accessing {target}."
+  
+  ci_pipeline:
+    template: "Create a {tool} pipeline configuration file to build, test, and deploy the application. Stages should include: {stages}."
+  
+  docker_file:
+    template: "Write a production-ready Dockerfile for a {language} application. Use multi-stage builds to minimize image size and ensure security best practices."
+
+  code_generation:
+    template: "Write a {language} {type} that implements {feature}. Follow clean code principles and include comments."
+
+  architecture_design:
+    template: "Design the system architecture for {feature} using the C4 model. Describe the Context, Containers, and Components. Output as Mermaid diagram code."
+
+  db_schema_design:
+    template: "Design a normalized database schema for {feature}. Include tables, relationships, indexes, and constraints. Output SQL DDL for {tool}."
+
+  readme_generation:
+    template: "Create a professional README.md for a {language} project named {target}. Include sections: Introduction, Installation, Usage, Configuration, and Contributing."
+
+  security_audit:
+    template: "Analyze the following {language} code/architecture for potential security vulnerabilities (OWASP Top 10) and suggest remediation steps."
+
+languages:
+  python:
+    frameworks:
+      testing: ["pytest", "unittest"]
+      web: ["FastAPI", "Django", "Flask"]
+      performance: ["Locust"]
+  
+  javascript:
+    frameworks:
+      testing: ["Jest", "Mocha", "Cypress"]
+      web: ["React", "Vue", "Express"]
+      performance: ["k6"]
+  
+  java:
+    frameworks:
+      testing: ["JUnit", "TestNG"]
+      web: ["Spring Boot"]
+      performance: ["JMeter"]
+
+  go:
+    frameworks:
+      testing: ["testing", "Testify"]
+      web: ["Gin", "Echo"]
+
+tools:
+  ci: ["GitHub Actions", "GitLab CI", "Jenkins"]
+  container: ["Docker", "Kubernetes", "Helm"]
+  database: ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+
+output_formats:
+  markdown: "Format the output in Markdown with clear headings and code blocks."
+  json: "Output the result as a valid JSON object."
+  code_only: "Provide only the code without conversational filler."
+  mermaid: "Output valid Mermaid.js diagram syntax."
